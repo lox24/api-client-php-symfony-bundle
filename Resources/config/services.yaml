@@ -14,6 +14,6 @@ services:
   lox24.api.client:
     class: 'lox24\api_client\api\Lox24Api'
     arguments:
-      $client: '@lox24.api_client.client'
+      $client: '@lox24.api.client_http'
 
 
