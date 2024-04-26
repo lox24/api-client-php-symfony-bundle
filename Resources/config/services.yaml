@@ -1,0 +1,11 @@
+services:
+  lox24.api.client:
+    class: '@lox24\api_client\Client'
+  arguments:
+    $httpClient: '@http_client'
+    $requestFactory: '@nyholm.psr7.psr17_factory'
+    $config: '@lox24\api_client\Config'
+
+  lox24\api_client\Config:
+    arguments:
+      $token: '%lox24.api_client.token%'
