@@ -23,5 +23,8 @@
         "psr-4": {
             "lox24\\bundle\\api_client\\": ""
         }
+    },
+    "scripts": {
+        "post-package-install": "lox24\\bundle\\api_client\\Scripts\\Installer::postInstall"
     }
 }
