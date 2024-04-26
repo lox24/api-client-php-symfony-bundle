@@ -1,15 +1,19 @@
 services:
-  lox24\api_client\api\Lox24Api:
-    class: '@lox24\api_client\api\Lox24Api'
-    arguments:
-      $client: '@lox24.api_client.client'
-  lox24.api.client:
-    class: '@lox24\api_client\Client'
-  arguments:
-    $httpClient: '@http_client'
-    $requestFactory: '@nyholm.psr7.psr17_factory'
-    $config: '@lox24\api_client\Config'
-
-  lox24\api_client\Config:
+  lox24.api.client_config:
+    class: 'lox24\api_client\Config'
     arguments:
       $token: '%lox24.api_client.token%'
+
+  lox24.api.client_http:
+    class: 'lox24\api_client\Client'
+    arguments:
+      $httpClient: '@http_client'
+      $requestFactory: '@nyholm.psr7.psr17_factory'
+      $config: '@lox24.api.client_config'
+
+  lox24.api.client:
+    class: 'lox24\api_client\api\Lox24Api'
+    arguments:
+      $client: '@lox24.api_client.client'
+
+
