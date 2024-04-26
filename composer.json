@@ -5,7 +5,7 @@
     "keywords": [
         "LOX24", "SMS", "API", "Symfony", "Bundle"
     ],
-    "homepage": "https://github.com/lox24/lox24_api_client_bundle",
+    "homepage": "https://github.com/lox24/api-client-php-symfony-bundle",
     "license": "MIT",
 
     "minimum-stability": "dev",
