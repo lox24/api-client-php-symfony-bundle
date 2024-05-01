@@ -12,7 +12,7 @@ readonly final class Installer {
     {
         $configDirPath = __DIR__ . '/../../../config/';
         self::appendToBundlesPhp($configDirPath, LOX24ApiClientBundle::class);
-        self::appendToBundlesPhp($configDirPath, LOX24ApiClientBundle::class);
+        self::createYamlConfig($configDirPath);
     }
 
     private static function appendToBundlesPhp(string $path, string $bundleClass, array $envs = ['all' => true]): void
@@ -34,7 +34,7 @@ readonly final class Installer {
     {
         $path .= 'packages/lox24.yaml';
         if (!file_exists($path)) {
-            $contents = "parameters:\n  lox24:\n    class: MyClass\n";
+            $contents = "parameters:\n  lox24:\n    api_client:\n      token: 'api token here'";
             file_put_contents($path, $contents);
         }
     }
