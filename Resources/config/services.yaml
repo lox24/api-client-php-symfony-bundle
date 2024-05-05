@@ -7,7 +7,7 @@ services:
   lox24.api.client_http:
     class: lox24\api_client\Client
     arguments:
-      $httpClient: '@http_client'
+      $client: '@http_client'
       $requestFactory: '@nyholm.psr7.psr17_factory'
       $config: '@lox24.api.client_config'
 
