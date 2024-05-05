@@ -34,7 +34,7 @@ readonly final class Installer {
     {
         $path .= 'packages/lox24.yaml';
         if (!file_exists($path)) {
-            $contents = "lox24:\n  token: 'api token here'\n";
+            $contents = "lox24:\n  api:\n    token: 'api token here'\n";
             file_put_contents($path, $contents);
         }
     }

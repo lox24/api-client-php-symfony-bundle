@@ -2,7 +2,7 @@ services:
   lox24.api.client_config:
     class: lox24\api_client\Config
     arguments:
-      $token: '%lox24.token%'
+      $token: '%lox24.api.token%'
 
   lox24.api.client_http:
     class: lox24\api_client\Client

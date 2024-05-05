@@ -22,6 +22,6 @@ class LOX24Bundle extends AbstractBundle
     {
 
         $container->import(__DIR__ . '/Resources/config/services.yaml');
-        $container->parameters()->set('lox24.token', $config['token']);
+        $container->parameters()->set('lox24.api.token', $config['token']);
     }
 }
