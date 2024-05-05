@@ -13,9 +13,12 @@ class LOX24Bundle extends AbstractBundle
     {
         $definition->rootNode()
                         ->children()
-                            ->scalarNode('token')->end()
-                        ->end()
-                    ->end();
+                            ->arrayNode('api')
+                                ->children()
+                                    ->scalarNode('token')->end()
+                                ->end()
+                            ->end()
+                        ->end();
     }
 
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
