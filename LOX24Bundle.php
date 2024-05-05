@@ -12,13 +12,10 @@ class LOX24Bundle extends AbstractBundle
     public function configure(DefinitionConfigurator $definition): void
     {
         $definition->rootNode()
-                   ->children()
-                        ->arrayNode('lox24')
-                            ->children()
-                                ->scalarNode('token')->end()
-                            ->end()
+                        ->children()
+                            ->scalarNode('token')->end()
                         ->end()
-                   ->end();
+                    ->end();
     }
 
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
