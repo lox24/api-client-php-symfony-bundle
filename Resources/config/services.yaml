@@ -1,3 +1,4 @@
+# src/Resources/config/services.yaml
 services:
   lox24.api.client_config:
     class: lox24\api_client\Config
@@ -7,12 +8,10 @@ services:
   lox24.api.client_http:
     class: lox24\api_client\Client
     arguments:
-      $client: '@http_client'
-      $requestFactory: '@nyholm.psr7.psr17_factory'
       $config: '@lox24.api.client_config'
+      $requestFactory: '%lox24.api.request_factory%'
+      $httpClient: '%lox24.api.http_client%'
 
   lox24\api_client\api\Lox24Api:
     arguments:
       $client: '@lox24.api.client_http'
-
-

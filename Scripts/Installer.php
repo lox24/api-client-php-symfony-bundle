@@ -11,8 +11,8 @@ readonly final class Installer {
     public static function postInstall(): void
     {
         $configDirPath = __DIR__ . '/../../../config/';
-        self::appendToBundlesPhp($configDirPath, LOX24Bundle::class);
-        self::createYamlConfig($configDirPath);
+        //self::appendToBundlesPhp($configDirPath, LOX24Bundle::class);
+        //self::createYamlConfig($configDirPath);
     }
 
     private static function appendToBundlesPhp(string $path, string $bundleClass, array $envs = ['all' => true]): void
