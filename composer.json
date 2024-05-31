@@ -2,7 +2,7 @@
     "name": "lox24eu/lox24_api_client_bundle",
     "type": "symfony-bundle",
     "description": "A simple Symfony bundle for the official sdk provided by LOX24.",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "keywords": [
         "LOX24", "SMS", "API", "Symfony", "Bundle"
     ],
@@ -15,17 +15,9 @@
         "symfony/framework-bundle": "~7.0",
         "lox24eu/lox24_api_client": "~0.2"
     },
-    "require-dev": {
-        "phpunit/phpunit": "~11.0",
-        "symfony/yaml": "7.0.x-dev",
-        "php-coveralls/php-coveralls": "dev-master"
-    },
     "autoload": {
         "psr-4": {
             "lox24\\bundle\\api_client\\": ""
         }
-    },
-    "scripts": {
-        "post-package-install": "lox24\\bundle\\api_client\\Scripts\\Installer::postInstall"
     }
 }
