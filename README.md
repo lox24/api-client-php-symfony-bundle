@@ -8,7 +8,7 @@
 composer require symfony/flex
 composer require lox24eu/lox24_api_client_bundle
 ```
-Apply recipe and fill your API token to .env variable `LOX24_API_TOKEN``
+Apply recipe and fill your API token to .env variable `LOX24_API_TOKEN`
 
 ### Manual
 
@@ -37,4 +37,4 @@ lox24:
         request_factory: '@nyholm.psr7.psr17_factory'
 ```
 
-Apply recipe and fill your API token to .env variable `LOX24_API_TOKEN``
+Apply recipe and fill your API token to .env variable `LOX24_API_TOKEN`
