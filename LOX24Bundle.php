@@ -25,7 +25,7 @@ class LOX24Bundle extends AbstractBundle
 
     public function loadExtension(array $config, ContainerConfigurator $container, ContainerBuilder $builder): void
     {
-        $container->import(__DIR__.'/Resources/config/lox24.yaml');
+        $container->import(__DIR__.'/Resources/config/service.yaml');
         $container->parameters()->set('lox24.api.token', $config['api']['token']);
         $container->parameters()->set('lox24.api.http_client', $config['api']['http_client']);
         $container->parameters()->set('lox24.api.request_factory', $config['api']['request_factory']);
