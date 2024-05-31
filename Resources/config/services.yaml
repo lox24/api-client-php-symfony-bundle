@@ -1,4 +1,3 @@
-# src/Resources/config/services.yaml
 services:
   lox24.api.client_config:
     class: lox24\api_client\Config
