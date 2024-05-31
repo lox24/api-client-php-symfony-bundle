@@ -2,7 +2,7 @@
     "name": "lox24eu/lox24_api_client_bundle",
     "type": "symfony-bundle",
     "description": "A simple Symfony bundle for the official sdk provided by LOX24.",
-    "version": "0.2.4",
+    "version": "0.3",
     "keywords": [
         "LOX24", "SMS", "API", "Symfony", "Bundle"
     ],
